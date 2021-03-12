@@ -6,39 +6,35 @@ module.exports = {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER,
+        type: Sequelize.INTEGER
       },
       userId: {
         type: Sequelize.INTEGER,
-        references: { model: 'Users', key: 'id' },
-      },
-      pageUrl: {
-        type: Sequelize.STRING,
       },
       pageId: {
         type: Sequelize.INTEGER,
         references: { model: 'Pages', key: 'id' },
       },
       colorHex: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING
       },
       text: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING
       },
       theme: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE,
+        type: Sequelize.DATE
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE,
-      },
+        type: Sequelize.DATE
+      }
     });
   },
   down: async (queryInterface, Sequelize) => {
     await queryInterface.dropTable('Highlights');
-  },
+  }
 };

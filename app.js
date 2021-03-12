@@ -2,12 +2,9 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 
-const highlightRouter = require('./controllers/highlight');
-
-const connect = require('./models');
+const highlightRouter = require('./routes/highlight');
 
 const app = express();
-connect();
 
 app.set('port', process.env.PORT || 5000);
 

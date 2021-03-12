@@ -9,15 +9,12 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      this.belongsTo(models.Users, { foreignKey: 'userId', targetKey: 'id' });
       this.belongsTo(models.Pages, { foreignKey: 'pageId', targetKey: 'id' });
     }
   }
   Highlights.init(
     {
-      id: DataTypes.INTEGER,
       userId: DataTypes.INTEGER,
-      pageUrl: DataTypes.STRING,
       pageId: DataTypes.INTEGER,
       colorHex: DataTypes.STRING,
       text: DataTypes.STRING,
