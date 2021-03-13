@@ -22,9 +22,9 @@ module.exports = async (req, res) => {
       },
       order: [[{ model: Highlights }, 'updatedAt', 'DESC']],
     });
-    
+
     res.status(200).json(userHighlightsArr);
   } catch (err) {
-    res.status(500).json({ error: err });
+    res.status(500).json({ isSuccess: false, error: err });
   }
 };

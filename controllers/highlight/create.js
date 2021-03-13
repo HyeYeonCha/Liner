@@ -49,6 +49,6 @@ module.exports = async (req, res) => {
       text: newHighlight.text,
     });
   } catch (err) {
-    res.status(500).json({ error: err });
+    res.status(500).json({ isSuccess: false, error: err });
   }
 };
