@@ -23,6 +23,7 @@ module.exports = async (req, res) => {
         {
           colorHex: newColorHex,
           theme: themeId,
+          updatedAt: new Date(),
         },
         {
           where: {
