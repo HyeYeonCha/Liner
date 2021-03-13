@@ -7,6 +7,7 @@ module.exports = async (req, res) => {
       {
         colorHex: colorHex,
         text: text,
+        updatedAt: new Date(),
       },
       {
         where: {
